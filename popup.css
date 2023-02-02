@@ -1,0 +1,56 @@
+body {
+  width: max-content;
+  margin: 0;
+  font-size: 1rem;
+  user-select: none;
+}
+
+.popup-title {
+  font-weight: 900;
+  background-color: orangered;
+  color: white;
+  width: 100%;
+  padding: 10px;
+}
+
+.popup-details {
+  font-style: italic;
+  color: orangered;
+  width: 100%;
+  padding: 10px;
+}
+
+.cursor-options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  justify-content: space-evenly;
+}
+
+.option {
+  border: 2px solid orangered;
+  border-radius: 100%;
+  background: white;
+  padding: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.option:hover {
+  background: lightgrey;
+}
+
+.option:active {
+  background: orangered;
+}
+
+.cursor-playroom {
+  width: 400px;
+  height: 400px;
+}
+
+img {
+  height: 100%;
+  object-fit: contain;
+  justify-content: center;
+}

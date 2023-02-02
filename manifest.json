@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Tabby Cats",
+  "description": "Play with different cute cat cursors. Cat Image Source: https://www.flaticon.com/packs/kitty-avatars",
+  "version": "1.0",
+  "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+  }
+}
