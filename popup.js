@@ -1,30 +1,20 @@
-function listen(eventType, selector, callback) {
-  document.querySelector(selector).addEventListener(eventType, callback);
+const playroom = document.getElementById("cursor-playroom");
+const sup = document.getElementById("super");
+const space = document.getElementById("space");
+const pop = document.getElementById("popsicle")
+
+function superCat() {
+  playroom.style.cursor = "url('/cursors/super-cursor.png'), help";
 }
 
-function openOptionsPage(optionsHTML) {
-  if (chrome.runtime.openOptionsPage) {
-    chrome.runtime.openOptionsPage();
-  } else {
-    window.open(chrome.runtime.getURL(optionsHTML));
-  }
+function spaceCat() {
+  playroom.style.cursor = "url('/cursors/space-cursor.png'), help";
 }
 
-async function sendMessageToContentScript(message) {
-  const [tab] = await chrome.tabs.query({
-    active: true,
-    lastFocusedWindow: true,
-  });
-  const response = await chrome.tabs.sendMessage(tab.id, message);
-  // You can do something with response from the content script here
-  console.log(response);
+function popCat() {
+  playroom.style.cursor = "url('/cursors/popsicle-cursor.png'), help";
 }
 
-listen("click", "#open-options", (e) =>
-  openOptionsPage("../options/options.html")
-);
-
-listen("change", "#enable", (e) =>
-  // Send a message to the content script with the current value of the checkbox
-  sendMessageToContentScript({ replace: e.target.checked })
-);
+sup.addEventListener("click", superCat());
+space.addEventListener("click", spaceCat());
+pop.addEventListener("click", popCat());

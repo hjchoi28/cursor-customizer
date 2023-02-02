@@ -40,13 +40,10 @@ body {
   background: lightgrey;
 }
 
-.option:active {
-  background: orangered;
-}
-
-.cursor-playroom {
+#cursor-playroom {
   width: 400px;
   height: 400px;
+  cursor: default;
 }
 
 img {
